@@ -1,22 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 // Components
 import Dashboard from './Dashboard';
 
-const App = () => {
+class App extends Component {
 
-  return (
-    <div className="App">
-      {/* { Main Headline } */}
-      {/* Header */}
-        {/* Logo*/}
-        {/* {NavBar} */}
+  state = {
+    weather: []
+  }
 
-      <Dashboard />
-        {/* Temperature */}
-        {/* Icon */} 
-    </div>
-  );
+  componentDidMount()  {
+    this.getWeather();
+  }
+
+  getWeather = (query="45039", type) => {
+    let url = `https://api.weatherapi.com/v1/current.json?key=cc1d4248f67f410a8bb230040210602&q=${query}`;
+  }
+
+  render() {
+    return (
+      <div className="App">
+        {/* { Main Headline } */}
+        {/* Header */}
+          {/* Logo*/}
+          {/* {NavBar} */}
+  
+        <Dashboard />
+          {/* Temperature */}
+          {/* Icon */} 
+      </div>
+    );
+  }
 }
 
 export default App;
