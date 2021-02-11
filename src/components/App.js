@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import '../styles/App.css';
 
 // Components
 import Dashboard from './Dashboard';
+import Header from './Header';
 
 class App extends Component {
 
@@ -32,14 +34,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* { Main Headline } */}
-        {/* Header */}
+        <h1>Weather App</h1>
+        <Header />
           {/* Logo*/}
           {/* {NavBar} */}
   
         <Dashboard weather={ this.state.weather } />
-          {/* Temperature */}
-          {/* Icon */} 
       </div>
     );
   }

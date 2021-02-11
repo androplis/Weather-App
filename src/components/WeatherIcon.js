@@ -1,9 +1,11 @@
 import React from 'react';
 
 const WeatherIcon = () => {
-    <div>
-        <img />
-    </div>
+    return (
+        <div>
+            <img />
+        </div>
+    );
 }
 
 export default WeatherIcon;
