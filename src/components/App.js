@@ -37,7 +37,7 @@ class App extends Component {
           {/* Logo*/}
           {/* {NavBar} */}
   
-        <Dashboard />
+        <Dashboard weather={ this.state.weather } />
           {/* Temperature */}
           {/* Icon */} 
       </div>

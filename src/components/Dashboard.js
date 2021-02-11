@@ -1,12 +1,14 @@
 import React from "react";
+// Components
 import Temperature from "./Temperature";
+import WeatherIcon from "./WeatherIcon";
 
-const Dashboard = () => {
+const Dashboard = ({ weather }) => {
     return (
-        <React.Fragment>
+        <div className="dashboard">
             <Temperature />
-
-        </React.Fragment>
+            <WeatherIcon />
+        </div>
     );
 }
 
