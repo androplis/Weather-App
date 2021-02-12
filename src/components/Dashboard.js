@@ -4,9 +4,10 @@ import Temperature from "./Temperature";
 import WeatherIcon from "./WeatherIcon";
 
 const Dashboard = ({ weather }) => {
+    console.log(weather);
     return (
         <div className="dashboard">
-            <Temperature />
+            <Temperature conditions={weather.current} />
             <WeatherIcon />
         </div>
     );

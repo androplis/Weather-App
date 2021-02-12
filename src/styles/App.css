@@ -1,3 +1,18 @@
 .App {
     background-color: grey;
 }
+
+/* =========== DASHBOARD STYLES ================*/
+
+
+/* TEMPERATURE COMPONENT*/
+.temp { grid-area: temp; }
+.feels_like { grid-area: feel;}
+.humidity { grid-area: humid; }
+
+div.temp-container {
+    display: grid;
+    grid-template-areas: "temp temp humid"
+                         "temp temp humid"
+                         "feel feel feel";
+}
