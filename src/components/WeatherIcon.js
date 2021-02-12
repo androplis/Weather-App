@@ -3,7 +3,7 @@ import React from 'react';
 const WeatherIcon = ({ conditions }) => {
     try {
         return (
-            <div>
+            <div className="icon-container">
                 <img src={`http://openweathermap.org/img/wn/${conditions[0].icon}@2x.png`}/>
             </div>
         );

@@ -41,11 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Weather App</h1>
         <Header />
-          {/* Logo*/}
-          {/* {NavBar} */}
-  
         <Dashboard weather={ this.state.weather } />
       </div>
     );
