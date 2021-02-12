@@ -5,7 +5,7 @@
 }
 
 /* =========== DASHBOARD STYLES ================*/
-/* DASHBOARD COMPONENT */
+
 
 /* TEMPERATURE COMPONENT */
 .temp { grid-area: temp; }
@@ -15,7 +15,13 @@
 
 div.temp-container {
     display: grid;
+    grid-area: temp-cont;
     grid-template-areas: "temp temp high"
                          "temp temp low"
                          "feel feel humidity";
+}
+
+/* DASHBOARD COMPONENT */
+div.dashboard {
+    display: grid;
 }

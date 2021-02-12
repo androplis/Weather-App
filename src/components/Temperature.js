@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Temperature = ({temps}) => {
-    console.log(temps);
+
     if (temps != null) {
         return (
             <div className="temp-container">

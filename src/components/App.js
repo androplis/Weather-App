@@ -15,7 +15,7 @@ class App extends Component {
     this.getWeather();
   }
 
-  getWeather = (query = "New York", type = "city") => {
+  getWeather = (query = "Maineville", type = "city") => {
     let url = "";
 
     try {
