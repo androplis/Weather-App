@@ -1,18 +1,21 @@
 .App {
     background-color: grey;
+    width: 550px;
+    height: 400px;
 }
 
 /* =========== DASHBOARD STYLES ================*/
+/* DASHBOARD COMPONENT */
 
-
-/* TEMPERATURE COMPONENT*/
+/* TEMPERATURE COMPONENT */
 .temp { grid-area: temp; }
-.feels_like { grid-area: feel;}
+.low { grid-area: low;}
+.high { grid-area: high;}
 .humidity { grid-area: humid; }
 
 div.temp-container {
     display: grid;
-    grid-template-areas: "temp temp humid"
-                         "temp temp humid"
-                         "feel feel feel";
+    grid-template-areas: "temp temp high"
+                         "temp temp low"
+                         "feel feel humidity";
 }

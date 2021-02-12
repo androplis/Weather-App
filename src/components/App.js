@@ -15,14 +15,21 @@ class App extends Component {
     this.getWeather();
   }
 
-  getWeather = (query="45039", type="current", days="1") => {
-    let url;
-    if (type === "current") {
-      url = `https://api.weatherapi.com/v1/current.json?key=cc1d4248f67f410a8bb230040210602&q=${query}`;
+  getWeather = (query = "New York", type = "city") => {
+    let url = "";
+
+    try {
+      if (type === "city") {
+        url = `http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=8b53bede6fbe3e0f12791e98c95016d5&units=imperial`;
+      }
+      else if (type === "zip") {
+        url = `http://api.openweathermap.org/data/2.5/weather?zip=${query}&appid=8b53bede6fbe3e0f12791e98c95016d5&units=imperial`;
+      }
     }
-    else {
-      url =`https://api.weatherapi.com/v1/forecast.json?key=cc1d4248f67f410a8bb230040210602&q=${query}&days=${days}`;
+    catch (error) {
+      console.log(error.message);
     }
+    
     
     fetch(url)
     .then(response => response.json())

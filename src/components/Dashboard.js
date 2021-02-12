@@ -7,8 +7,8 @@ const Dashboard = ({ weather }) => {
     console.log(weather);
     return (
         <div className="dashboard">
-            <Temperature conditions={weather.current} />
-            <WeatherIcon />
+            <Temperature temps={weather.main} />
+            <WeatherIcon conditions={weather.weather} />
         </div>
     );
 }
