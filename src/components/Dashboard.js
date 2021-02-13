@@ -19,11 +19,11 @@ const Dashboard = ({ weather }) => {
                 />
                 <Route
                     path='/hour'
-                    render={props => (<NowView weather={weather} isAuthed={true} />)}
+                    render={props => (<HourView weather={weather} isAuthed={true} />)}
                 />
                 <Route
                     path='/tenday'
-                    render={props => (<NowView weather={weather} isAuthed={true} />)}
+                    render={props => (<TenDayView weather={weather} isAuthed={true} />)}
                 />
 
             </Switch>

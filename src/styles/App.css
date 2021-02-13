@@ -2,9 +2,10 @@
     width: 550px;
     display: grid;
     grid-template-rows: 1fr 1.5fr;
+    border: 2px solid rgb(50, 64, 117);
 }
 
-.now-view, .temp-container, .icon-container {
+.now-view, .temp-container, .icon-container, .App {
     border-radius: 15px;
 }
 
@@ -67,6 +68,7 @@ header form button:active {
 /* NAV-BAR COMPOENENT */
 nav.navbar {
     grid-area: nav;
+    background-color: rgb(228, 226, 226);
 }
 
 nav.navbar ul {
@@ -77,21 +79,26 @@ nav.navbar ul {
     margin: 0;
     height: 100%;
     padding: 0;
-    border-bottom: 1px solid rgb(50, 64, 117);
 }
 
-nav.navbar ul .link {
+nav.navbar ul a {
     list-style: none; 
     text-decoration: none;
     font-size: 15px;
     padding: 5px 10px;
     color: rgb(50, 64, 117);
     font-weight: bold;
-    border-bottom: 4px solid rgb(243, 167, 18);
     margin-bottom: 5px;
 }
 
 .selected {
+    list-style: none; 
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 10px;
+    color: rgb(50, 64, 117);
+    font-weight: bold;
+    margin-bottom: 5px;
     border-bottom: 4px solid rgb(243, 167, 18);
 }
 
@@ -152,13 +159,13 @@ div.icon-container img {
 }
 
 /* NOW-VIEW COMPONENT */
-div.nowView {
+div.now-view {
     display: grid;
     padding: 0 25px;
     grid-template-columns: 2fr .5fr 2fr;
-    grid-template-rows: 40px 1fr;
+    grid-template-rows: 45x 1fr;
     grid-template-areas: 
                         "nav nav nav"
                          "temp-cont . icon-cont";     
-    border: 2px solid rgb(50, 64, 117);
+    /* border: 2px solid rgb(50, 64, 117); */
 }

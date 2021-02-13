@@ -5,9 +5,9 @@ const NavBar = () => {
     return (
         <nav className="navbar">
             <ul>
-                    <NavLink to="/" class="link" activeClassName="selected">NOW</NavLink>
-                    <NavLink to="/hour" class="link" activeClassName="selected">HOURLY</NavLink>
-                    <NavLink to="/tenday" class="link" activeClassName="selected">10 DAY</NavLink>
+                    <NavLink exact to="/" activeClassName="selected">NOW</NavLink>
+                    <NavLink to="/hour" activeClassName="selected">HOURLY</NavLink>
+                    <NavLink to="/tenday" activeClassName="selected">10 DAY</NavLink>
             </ul>
         </nav>
     );
