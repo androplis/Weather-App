@@ -1,19 +1,13 @@
 import React from 'react';
-import {NavLink, BrowserRouter as Router, Route} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const NavBar = () => {
     return (
         <nav className="navbar">
             <ul>
-                {/* <li>NOW</li>
-                <li>HOURLY</li>
-                <li>10 DAY</li> */}
-                <Router>
                     <NavLink to="/" class="link" activeClassName="selected">NOW</NavLink>
-                    <NavLink to="/" class="link" activeClassName="selected">HOURLY</NavLink>
-                    <NavLink to="/" class="link" activeClassName="selected">10 DAY</NavLink>
-                </Router>
-
+                    <NavLink to="/hour" class="link" activeClassName="selected">HOURLY</NavLink>
+                    <NavLink to="/tenday" class="link" activeClassName="selected">10 DAY</NavLink>
             </ul>
         </nav>
     );

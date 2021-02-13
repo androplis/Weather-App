@@ -41,8 +41,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header onSearch={this.getWeather} />
-        <Dashboard weather={ this.state.weather } />
+          <Header onSearch={this.getWeather} />
+          <Dashboard weather={ this.state.weather } />
       </div>
     );
   }

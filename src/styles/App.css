@@ -4,7 +4,7 @@
     grid-template-rows: 1fr 1.5fr;
 }
 
-.dashboard, .temp-container, .icon-container {
+.now-view, .temp-container, .icon-container {
     border-radius: 15px;
 }
 
@@ -77,13 +77,18 @@ nav.navbar ul {
     margin: 0;
     height: 100%;
     padding: 0;
+    border-bottom: 1px solid rgb(50, 64, 117);
 }
 
 nav.navbar ul .link {
     list-style: none; 
+    text-decoration: none;
+    font-size: 15px;
     padding: 5px 10px;
     color: rgb(50, 64, 117);
-
+    font-weight: bold;
+    border-bottom: 4px solid rgb(243, 167, 18);
+    margin-bottom: 5px;
 }
 
 .selected {
@@ -146,8 +151,8 @@ div.icon-container img {
     height: 150px;
 }
 
-/* DASHBOARD COMPONENT */
-div.dashboard {
+/* NOW-VIEW COMPONENT */
+div.nowView {
     display: grid;
     padding: 0 25px;
     grid-template-columns: 2fr .5fr 2fr;
