@@ -30,7 +30,6 @@ class App extends Component {
       console.log(error.message);
     }
     
-    
     fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -38,10 +37,11 @@ class App extends Component {
     });
   }
 
+
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header onSearch={this.getWeather} />
         <Dashboard weather={ this.state.weather } />
       </div>
     );

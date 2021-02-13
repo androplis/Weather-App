@@ -3,11 +3,11 @@ import React from 'react';
 // Components
 import SearchForm from './SearchForm.js';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
             <h1>LOGO</h1>
-            <SearchForm />
+            <SearchForm onSearch={props.onSearch}/>
         </header>
     );
 }

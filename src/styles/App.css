@@ -9,49 +9,30 @@
 
 header {
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* SEARCH-BAR COMPONENT */
+header form input {
+    width: 275px;
+    padding: 5px 15px;
+    margin: 20px;
+    border-radius: 20px;
+    font-size: 17px;
+    border: 2px solid orange;
+}
+
+header form input:focus {
+    outline: none;
+    box-shadow:0 0 2px coral;
 }
 
 /* =========== DASHBOARD STYLES ================*/
 
-
-/* TEMPERATURE COMPONENT */
-.temp { grid-area: temp; }
-.low { grid-area: low;}
-.high { grid-area: high;}
-.feel { grid-area: feel; }
-
-div.temp-container {
-    display: grid;
-    grid-area: temp-cont;
-    border: 2px solid black;
-    margin: 20px 5px 20px 10px;
-    padding: 20px 10px;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: "temp high"
-                         "temp low"
-                         "feel .";
-}
-
-.high, .low {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-}
-
-.feel {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 14px;
-}
-
-.temp {
-    font-size: 55px;
-    margin-left: 20px;
-}
-
-/* NAVBAR COMPOENENT */
+/* NAV-BAR COMPOENENT */
 nav.navbar {
     border: 2px solid black;
     grid-area: nav;
@@ -72,11 +53,59 @@ nav.navbar ul li {
     padding: 5px 10px;
 }
 
-/* WEATHERICON COMPONENT */ 
+/* TEMPERATURE COMPONENT */
+.temp { grid-area: temp; }
+.low { grid-area: low;}
+.high { grid-area: high;}
+.feel { grid-area: feel; }
+
+div.temp-container {
+    display: grid;
+    grid-area: temp-cont;
+    border: 2px solid black;
+    margin: 20px 5px 20px 10px;
+    padding: 20px 10px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 30px;
+    grid-template-areas: 
+                        "temp high"
+                         "temp low"
+                         "feel .";
+}
+
+.high, .low {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.feel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.temp {
+    font-size: 55px;
+    display: grid;
+    place-items: center;
+}
+
+/* WEATHER-ICON COMPONENT */ 
 div.icon-container {
     border: 2px solid black;
     grid-area: icon-cont;
     margin: 20px 10px 20px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.icon-container img {
+    width: 150px;
+    height: 150px;
 }
 
 /* DASHBOARD COMPONENT */
@@ -84,7 +113,7 @@ div.dashboard {
     display: grid;
     padding: 0 25px;
     grid-template-columns: 2fr .5fr 2fr;
-    grid-template-rows: 1fr 200px;
+    grid-template-rows: 40px 200px;
     grid-template-areas: 
                         "nav nav nav"
                          "temp-cont . icon-cont";     

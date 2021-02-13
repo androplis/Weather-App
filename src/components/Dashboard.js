@@ -5,7 +5,6 @@ import WeatherIcon from "./WeatherIcon";
 import NavBar from './NavBar';
 
 const Dashboard = ({ weather }) => {
-    console.log(weather);
     return (
         <div className="dashboard">
             <NavBar />
