@@ -6,7 +6,7 @@ import SearchForm from './SearchForm.js';
 const Header = (props) => {
     return (
         <header>
-            <h1>LOGO</h1>
+            <i class="fas fa-cloud"></i>
             <SearchForm onSearch={props.onSearch}/>
         </header>
     );

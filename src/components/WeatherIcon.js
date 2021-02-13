@@ -4,7 +4,7 @@ const WeatherIcon = ({ conditions }) => {
     try {
         return (
             <div className="icon-container">
-                <img src={`http://openweathermap.org/img/wn/${conditions[0].icon}@2x.png`}/>
+                <img src={`http://openweathermap.org/img/wn/${conditions[0].icon}@2x.png`} alt="Weather Icon"/>
             </div>
         );
     }

@@ -1,28 +1,37 @@
 .App {
-    border: 2px solid black;
     width: 550px;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1.5fr;
+}
+
+.dashboard, .temp-container, .icon-container {
+    border-radius: 15px;
 }
 
 /* ============== HEADER STYLS =================*/
 
 header {
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+header i {
+    font-size: 60px;
+    margin: 20px 0;
+    color:rgb(50, 64, 117);
+}
+
 /* SEARCH-BAR COMPONENT */
 header form input {
     width: 275px;
-    padding: 5px 15px;
-    margin: 20px;
+    padding: 8px 15px;
+    margin: 10px 20px 20px 20px;
     border-radius: 20px;
     font-size: 17px;
-    border: 2px solid orange;
+    border: 2px solid rgb(50, 64, 117);
+    color: grey;
 }
 
 header form input:focus {
@@ -30,11 +39,33 @@ header form input:focus {
     box-shadow:0 0 2px coral;
 }
 
+header form button {
+    outline: none;
+    border: none;
+    box-shadow: 0 .075px 1px 1px lightcoral;
+    background-color: rgb(255, 170, 0);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+header form button:hover {
+    cursor: pointer;
+    background-color:rgb(243, 167, 18) ;
+}
+
+header form button:active {
+    cursor: pointer;
+    box-shadow: none;
+    color:rgb(50, 64, 117);
+}
+
 /* =========== DASHBOARD STYLES ================*/
 
 /* NAV-BAR COMPOENENT */
 nav.navbar {
-    border: 2px solid black;
     grid-area: nav;
 }
 
@@ -48,9 +79,15 @@ nav.navbar ul {
     padding: 0;
 }
 
-nav.navbar ul li {
+nav.navbar ul .link {
     list-style: none; 
     padding: 5px 10px;
+    color: rgb(50, 64, 117);
+
+}
+
+.selected {
+    border-bottom: 4px solid rgb(243, 167, 18);
 }
 
 /* TEMPERATURE COMPONENT */
@@ -62,7 +99,8 @@ nav.navbar ul li {
 div.temp-container {
     display: grid;
     grid-area: temp-cont;
-    border: 2px solid black;
+    background-color: rgb(228, 226, 226);
+    color: rgb(50, 64, 117);
     margin: 20px 5px 20px 10px;
     padding: 20px 10px;
     grid-template-columns: 2fr 1fr;
@@ -95,7 +133,7 @@ div.temp-container {
 
 /* WEATHER-ICON COMPONENT */ 
 div.icon-container {
-    border: 2px solid black;
+    background-color: rgb(228, 226, 226);
     grid-area: icon-cont;
     margin: 20px 10px 20px 5px;
     display: flex;
@@ -113,9 +151,9 @@ div.dashboard {
     display: grid;
     padding: 0 25px;
     grid-template-columns: 2fr .5fr 2fr;
-    grid-template-rows: 40px 200px;
+    grid-template-rows: 40px 1fr;
     grid-template-areas: 
                         "nav nav nav"
                          "temp-cont . icon-cont";     
-    border: 2px solid black;
+    border: 2px solid rgb(50, 64, 117);
 }
