@@ -6,7 +6,7 @@ import WeatherIcon from "../WeatherIcon";
 const NowView = ({weather}) => {
     return (
         <div className="now-view">
-            <Temperature temps={weather.main} />
+            <Temperature temps={weather} />
             <WeatherIcon conditions={weather.weather}/>
         </div>
     );

@@ -6,29 +6,26 @@ import HourView from './Views/HourView';
 import TenDayView from './Views/TenDayView';
 import NavBar from './NavBar';
 
-const Dashboard = ({ weather }) => {
-    console.log(weather);
+const Dashboard = ({ weather, getWeather }) => {
     return (
         <div className="dashboard">
             <NavBar />
             <Switch>
                 <Route
                     path='/'
-                    render={props => (<NowView weather={weather} isAuthed={true} />)}
+                    render={props => (<NowView weather={weather.current} isAuthed={true} />)}
                     exact 
                 />
                 <Route
                     path='/hour'
-                    render={props => (<HourView weather={weather} isAuthed={true} />)}
+                    render={props => (<HourView getWeather={getWeather} isAuthed={true} />)}
                 />
                 <Route
                     path='/tenday'
                     render={props => (<TenDayView weather={weather} isAuthed={true} />)}
                 />
-
+                {/* <Route component={Error} /> */}
             </Switch>
-            {/* <Temperature temps={weather.main} />
-            <WeatherIcon conditions={weather.weather} /> */}
         </div>
     );
 }

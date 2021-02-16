@@ -3,6 +3,7 @@
     display: grid;
     grid-template-rows: 1fr 1.5fr;
     border: 2px solid rgb(50, 64, 117);
+    box-shadow: 0 .75px 1px 2px rgb(228, 226, 226);
 }
 
 .now-view, .temp-container, .icon-container, .App {

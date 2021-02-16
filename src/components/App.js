@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 
-// Components
+// COMPONENTS
 import Dashboard from './Dashboard';
 import Header from './Header';
+
+// API KEYS
+const openWeatherApiKey = process.env.REACT_APP_OPENWEATHER_API;
+const positionStackApiKey = process.env.REACT_APP_POSITIONSTACK_API;
 
 class App extends Component {
 
@@ -15,16 +19,17 @@ class App extends Component {
     this.getWeather();
   }
 
+  getCoords = (query = "Maineville") => {
+  }
+
+
   getWeather = (query = "Maineville", type = "city") => {
     let url = "";
+    let lat = "33.441792";
+    let lon = "-94.037689";
 
     try {
-      if (type === "city") {
-        url = `http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=8b53bede6fbe3e0f12791e98c95016d5&units=imperial`;
-      }
-      else if (type === "zip") {
-        url = `http://api.openweathermap.org/data/2.5/weather?zip=${query}&appid=8b53bede6fbe3e0f12791e98c95016d5&units=imperial`;
-      }
+        url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={minutely,alerts}&appid=${openWeatherApiKey}&units=imperial`;
     }
     catch (error) {
       console.log(error.message);
@@ -37,12 +42,13 @@ class App extends Component {
     });
   }
 
-
+  
   render() {
+    console.log(this.state.weather);
     return (
       <div className="App">
-          <Header onSearch={this.getWeather} />
-          <Dashboard weather={ this.state.weather } />
+          {/* <Header onSearch={this.getWeather} />
+          <Dashboard weather={ this.state.weather } getWeather={this.getWeather}/> */}
       </div>
     );
   }
